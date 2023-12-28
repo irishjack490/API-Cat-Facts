@@ -10,7 +10,7 @@ const axios = require('axios');
 
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/cats');
+const catsRouter = require('./routes/cats');
 const { resourceLimits } = require('worker_threads');
 
 const app = express();
@@ -27,8 +27,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use('/routes/index', indexRouter);
-app.use('/routes/cats', catsRouter);
+app.use('/', indexRouter);
+app.use('/cats', catsRouter);
 
 
 // catch 404 and forward to error handler
@@ -63,7 +63,7 @@ app.get('/views/index', (req, res) => {
 //   console.log(response.data);
 // });
 
-
+//This does not work, moved it to  routes/cats.js and used 
 // app.get('/cats/fact', (req, res, next) => {
 //   axios.get('https://catfact.ninja/fact')
 //     .then(response => {

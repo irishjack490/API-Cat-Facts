@@ -1,4 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (res, ))
+
+router.get('/', (req, res, next ) =>{
+    res.render('index', {title : 'Cat Facts'});
+    
+});
+
+module.exports = router;
