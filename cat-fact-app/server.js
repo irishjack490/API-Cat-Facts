@@ -3,10 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var http = require('http');
-var {parse} = require ('url');
+//var http = require('http');
+//var {parse} = require ('url');
 const PORT = 3000;
-const axios = require('axios');
+//const axios = require('axios');
 
 
 const indexRouter = require('./routes/index');
@@ -63,7 +63,7 @@ app.get('/views/index', (req, res) => {
 //   console.log(response.data);
 // });
 
-//This does not work, moved it to  routes/cats.js and used 
+//This does not work, moved it to  routes/cats.js and used fetch instead
 // app.get('/cats/fact', (req, res, next) => {
 //   axios.get('https://catfact.ninja/fact')
 //     .then(response => {
